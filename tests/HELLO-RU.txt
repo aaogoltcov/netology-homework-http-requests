@@ -1,0 +1,1 @@
+{"code":200,"detected":{"lang":"ru"},"lang":"ru-ru","text":["text","привет"]}

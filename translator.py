@@ -23,7 +23,7 @@ def file_translate(file_path):
     with open(file_name, 'wb') as file_new:
         file_new.write(translate_result.content)
     print(f'Сохранили новый файл на локальном диске: {file_name}')
-    return file_name
+    return file_name, translate_result
 
 
 def translation_to_disk(file_name, oauth_token):
@@ -54,7 +54,9 @@ def main(file_name, oauth_token):
     return oauth_token
 
 
-oauth_token = 'OAuth ' + input('Для будущей загрузки файла на Ya диск, введите OAuth токен (без "OAuth "): ')
-main('FR.txt', oauth_token)
-main('DE.txt', oauth_token)
-main('ES.txt', oauth_token)
+if __name__ == '__main__':
+    oauth_token = 'AgAAAAAdIqkHAADLW1N-g4TL3Uh-uTPOvwIiHa8'
+    # oauth_token = 'OAuth ' + input('Для будущей загрузки файла на Ya диск, введите OAuth токен (без "OAuth "): ')
+    main('FR.txt', oauth_token)
+    main('DE.txt', oauth_token)
+    main('ES.txt', oauth_token)
